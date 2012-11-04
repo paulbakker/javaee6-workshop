@@ -1,0 +1,16 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets" template="resources/templates/template.xhtml">
+
+
+    <ui:define name="content">
+        <f:metadata>
+            <f:viewParam name="productid" value="#{productDetailsBean.productId}"/>
+            <f:event type="javax.faces.event.PreRenderComponentEvent" listener="#{productDetailsBean.loadProduct}"/>
+        </f:metadata>
+
+        <h1>#{productDetailsBean.product.name}</h1>
+        <h:link outcome="index.xhtml" value="back to overview"/>
+    </ui:define>
+
+</ui:composition>

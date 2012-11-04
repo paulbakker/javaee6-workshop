@@ -1,0 +1,13 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets" template="resources/templates/template.xhtml">
+
+
+    <ui:define name="content">
+        <h:form>
+            Are you sure you want to checkout #{basket.total} worth of Duke merchendise?
+            <h:commandButton value="Of course!" action="#{basket.checkout}"/>
+        </h:form>
+    </ui:define>
+
+</ui:composition>
